@@ -30,7 +30,7 @@ zero_not_accepted = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width
 df[zero_not_accepted] = df[zero_not_accepted].fillna(df[zero_not_accepted].mean)
 
 #Splitting dataset
-X = df.drop("species")
+X = df.drop("species", axis = 'columns')
 y = df["species"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0, test_size=0.2)
 
@@ -39,5 +39,18 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
+#Calculate k value
+k = int(np.sqrt(len(X_train_scaled))) #square root heuristic
+print("The number of neighbors: ", k)
 #--------------------Fitting the model---------------------
 #Define the KNN classifier model
+classifier = KNeighborsClassifier(n_neighbors=k-1, p=2, metric="euclidean")
+classifier.fit(X_train_scaled, y_train)
+y_pred = classifier.predict(X_test_scaled)
+print(y_pred)
+
+
+#-------------------Evaluating the model-------------------
+#Confusion Matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
