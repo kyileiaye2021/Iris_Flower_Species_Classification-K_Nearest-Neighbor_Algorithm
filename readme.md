@@ -30,7 +30,7 @@
 5. Predicting the species of Input Iris Flower
    
 ### Results of the project
-The accuracy of the K Nearest Neighbor (KNN) classifier model in this project is 100% as there is no misclassification in confusion matrix and the accuracy score is 1.0. Despite the 100% accuracy, the model can still be optimized by calculating k value with more advanced method such as **Cross Validation** instead of **Square Root Heuristic**.
+The accuracy of the K Nearest Neighbor (KNN) classifier model in this project is 100% (probably because of small dataset) as there is no misclassification in confusion matrix and the accuracy score is 1.0. Despite the 100% accuracy, the model can still be optimized by calculating k value with more advanced method such as **Cross Validation** instead of **Square Root Heuristic**.
 
 ## Reference
 1. https://www.freecodecamp.org/news/k-nearest-neighbors-algorithm-classifiers-and-model-example/
