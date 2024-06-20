@@ -1,6 +1,6 @@
 # Predicting Species of Iris Flower with K Nearest Neighbor Algorithm
 
-## K Nearest Neighbor Algorithm (can be used for classifying objects and regression) But, in this project, it is used for classification.
+## K Nearest Neighbor Algorithm can be used for classifying objects and regression. But, in this project, it is used for classification.
 
 ### Concepts of K Nearest Neighbor in classification tasks
 1. Set the value of k (num of neighbors)
