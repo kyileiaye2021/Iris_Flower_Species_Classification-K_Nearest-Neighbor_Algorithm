@@ -9,7 +9,7 @@
 4. Find the nearest distances in the range of k
 5. Assign the target datapoint in the class based on the majority of vote 
 
-# Steps of building K Nearest Classifier 
+### Steps of building K Nearest Classifier 
 1. Dataset
    1. Import necessary libraries (pandas, numpy, sklearn) | confusion_matrix, f1_score, and accuracy_score are also imported from sklearn module for evaluating the model
    2. Load the dataset
@@ -32,6 +32,6 @@
 ### Results of the project
 The accuracy of the K Nearest Neighbor (KNN) classifier model in this project is 100% (probably because of small dataset) as there is no misclassification in confusion matrix and the accuracy score is 1.0. Despite the 100% accuracy, the model can still be optimized by calculating k value with more advanced method such as **Cross Validation** instead of **Square Root Heuristic**.
 
-## Reference
+### References
 1. https://www.freecodecamp.org/news/k-nearest-neighbors-algorithm-classifiers-and-model-example/
 2. https://www.youtube.com/watch?v=4HKqjENq9OU
