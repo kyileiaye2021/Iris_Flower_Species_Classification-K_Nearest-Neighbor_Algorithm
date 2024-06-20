@@ -50,7 +50,22 @@ y_pred = classifier.predict(X_test_scaled)
 print(y_pred)
 
 
-#-------------------Evaluating the model-------------------
+#-------------------Evaluating the model with performance metrics-------------------
 #Confusion Matrix
+#A confusion matrix with no misclassifications would indicate that the model is performing perfectly on the given dataset, with 100% accuracy for all classes. 
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
+
+#f-1 score
+# For macro-average F1-score
+print("F1-score (macro):", f1_score(y_test, y_pred, average='macro'))
+
+# For micro-average F1-score
+print("F1-score (micro):", f1_score(y_test, y_pred, average='micro'))
+
+# For weighted-average F1-score
+print("F1-score (weighted):", f1_score(y_test, y_pred, average='weighted'))
+
+#accuracy score
+accuracy_score_of_model = accuracy_score(y_test, y_pred)
+print("Accuracy Score:", accuracy_score_of_model)
